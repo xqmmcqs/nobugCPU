@@ -1,0 +1,9 @@
+Fitter Status : Successful - Fri Jul 02 20:51:01 2021
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
+Revision Name : nobugCPU
+Top-level Entity Name : nobugCPU
+Family : MAX7000S
+Device : EPM7128SLC84-15
+Timing Models : Final
+Total macrocells : 28 / 128 ( 22 % )
+Total pins : 45 / 68 ( 66 % )
