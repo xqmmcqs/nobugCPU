@@ -4,12 +4,12 @@ use ieee.std_logic_unsigned.all;
 
 entity nobugCPU is
     port(
-        CLR, T3, C, Z: in std_logic;
-        IR: in std_logic_vector(7 downto 4);
-        SW, W: in std_logic_vector(3 downto 1);
-        DRW, PCINC, LPC, LAR, PCADD, ARINC, SELCTL, MEMW, STOP, LIR, LDZ, LDC, CIN, M, ABUS, SBUS, MBUS, SHORT, LONG: out std_logic;
-        S, SEL: out std_logic_vector(3 downto 0)
-    );
+    CLR, T3, C, Z: in std_logic;
+    IR: in std_logic_vector(7 downto 4);
+    SW, W: in std_logic_vector(3 downto 1);
+    DRW, PCINC, LPC, LAR, PCADD, ARINC, SELCTL, MEMW, STOP, LIR, LDZ, LDC, CIN, M, ABUS, SBUS, MBUS, SHORT, LONG: out std_logic;
+    S, SEL: out std_logic_vector(3 downto 0)
+);
 end nobugCPU;
 
 architecture arch of nobugCPU is
@@ -34,7 +34,7 @@ begin
     JMP <= '1' when IR = "1001" and INS_FETCH = '1' and ST0 = '1' else '0';
     STP <= '1' when IR = "1110" and INS_FETCH = '1' and ST0 = '1' else '0';
 
-	NOP <= '1' when IR = "0000" and INS_FETCH = '1' and ST0 = '1' else '0';
+    NOP <= '1' when IR = "0000" and INS_FETCH = '1' and ST0 = '1' else '0';
     OUT_I <= '1' when IR = "1010" and INS_FETCH = '1' and ST0 = '1' else '0';
     OR_I <= '1' when IR = "1011" and INS_FETCH = '1' and ST0 = '1' else '0';
     CMP <= '1' when IR = "1100" and INS_FETCH = '1' and ST0 = '1' else '0';
@@ -42,13 +42,13 @@ begin
 
     process(CLR, T3, W)
     begin
-    	if (CLR = '0') then
-    		ST0 <= '0';
-    	elsif (T3'event and T3 = '0') then
-               if (ST0 = '0' and ((WRITE_REG = '1' and W(2) = '1') or (READ_MEM = '1' and W(1) = '1') or (WRITE_MEM = '1' and W(1) = '1') or (INS_FETCH = '1' and W(2) = '1'))) then
-    				ST0 <= '1';
-    		end if;
-           end if;
+        if (CLR = '0') then
+            ST0 <= '0';
+        elsif (T3'event and T3 = '0') then
+            if (ST0 = '0' and ((WRITE_REG = '1' and W(2) = '1') or (READ_MEM = '1' and W(1) = '1') or (WRITE_MEM = '1' and W(1) = '1') or (INS_FETCH = '1' and W(2) = '1'))) then
+                ST0 <= '1';
+            end if;
+        end if;
     end process;
 
     SBUS <= ((WRITE_REG or (READ_MEM and not ST0) or WRITE_MEM or (INS_FETCH and not ST0)) and W(1)) or (WRITE_REG and W(2));
