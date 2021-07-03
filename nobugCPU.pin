@@ -60,7 +60,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 CHIP  "nobugCPU"  ASSIGNED TO AN: EPM7128SLC84-15
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
@@ -145,7 +145,7 @@ RESERVED                     : 77        :        :                   :         
 VCCIO                        : 78        : power  :                   : 5.0V    :           :                
 RESERVED                     : 79        :        :                   :         :           :                
 RESERVED                     : 80        :        :                   :         :           :                
-Z                            : 81        : input  : TTL               :         :           : N              
+RESERVED                     : 81        :        :                   :         :           :                
 GND                          : 82        : gnd    :                   :         :           :                
 T3                           : 83        : input  : TTL               :         :           : Y              
-GND+                         : 84        :        :                   :         :           :                
+Z                            : 84        : input  : TTL               :         :           : Y              

@@ -41,7 +41,7 @@ set_global_assignment -name DEVICE "EPM7128SLC84-15"
 set_global_assignment -name TOP_LEVEL_ENTITY nobugCPU
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.0 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:44:46  JULY 02, 2021"
-set_global_assignment -name LAST_QUARTUS_VERSION "9.0 SP2"
+set_global_assignment -name LAST_QUARTUS_VERSION 9.1
 set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
 set_global_assignment -name VHDL_FILE nobugCPU.vhd
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
@@ -88,3 +88,5 @@ set_location_assignment PIN_16 -to W[3]
 set_location_assignment PIN_15 -to W[2]
 set_location_assignment PIN_12 -to W[1]
 set_global_assignment -name MISC_FILE "C:/Users/HP/Desktop/nobugCPU/nobugCPU.dpf"
+set_global_assignment -name MISC_FILE "C:/Users/Administrator/Desktop/nobugCPU/nobugCPU.dpf"
+set_location_assignment PIN_84 -to Z
