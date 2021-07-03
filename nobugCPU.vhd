@@ -45,7 +45,7 @@ begin
     	if (CLR = '0') then
     		ST0 <= '0';
     	elsif (T3'event and T3 = '0') then
-               if (ST0 = '0' and ((WRITE_REG = '1' and W(2) = '1') or (READ_MEM = '1' and W(1) = '1') or (WRITE_MEM = '1' and W(1) = '1') or (INS_FETCH = '1' and W(1) = '1'))) then
+               if (ST0 = '0' and ((WRITE_REG = '1' and W(2) = '1') or (READ_MEM = '1' and W(1) = '1') or (WRITE_MEM = '1' and W(1) = '1') or (INS_FETCH = '1' and W(2) = '1'))) then
     				ST0 <= '1';
     		end if;
            end if;
@@ -66,7 +66,7 @@ begin
 
     LAR <= ((READ_MEM or WRITE_MEM) and W(1) and not ST0) or ((ST or LD) and W(1));
 
-    SHORT <= ((READ_MEM or WRITE_MEM) and W(1)) or (INS_FETCH and not ST0 and W(1)) or ((NOP or ADD or SUB or AND_I or INC or (JC and not C) or (JZ and not Z) or OUT_I or OR_I or CMP or MOV) and W(1));
+    SHORT <= ((READ_MEM or WRITE_MEM) and W(1)) or ((NOP or ADD or SUB or AND_I or INC or (JC and not C) or (JZ and not Z) or OUT_I or OR_I or CMP or MOV) and W(1));
 
     MBUS <= (READ_MEM and W(1) and ST0) or (LD and W(2));
 
@@ -74,8 +74,8 @@ begin
 
     MEMW <= (WRITE_MEM and W(1) and ST0) or (ST and W(2));
 
-    PCINC <= ((NOP or ADD or SUB or AND_I or INC or (JC and not C) or (JZ and not Z) or OUT_I or OR_I or CMP or MOV) and W(1)) or ((LD or ST or (JC and C) or (JZ and Z) or JMP) and W(2));
-    LIR <= ((NOP or ADD or SUB or AND_I or INC or (JC and not C) or (JZ and not Z) or OUT_I or OR_I or CMP or MOV) and W(1)) or ((LD or ST or (JC and C) or (JZ and Z) or JMP) and W(2));
+    PCINC <= (INS_FETCH and not ST0 and W(2)) or ((NOP or ADD or SUB or AND_I or INC or (JC and not C) or (JZ and not Z) or OUT_I or OR_I or CMP or MOV) and W(1)) or ((LD or ST or (JC and C) or (JZ and Z) or JMP) and W(2));
+    LIR <= (INS_FETCH and not ST0 and W(2)) or ((NOP or ADD or SUB or AND_I or INC or (JC and not C) or (JZ and not Z) or OUT_I or OR_I or CMP or MOV) and W(1)) or ((LD or ST or (JC and C) or (JZ and Z) or JMP) and W(2));
 
     CIN <= ADD and W(1);
 
