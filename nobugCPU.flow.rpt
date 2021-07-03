@@ -1,6 +1,6 @@
 Flow report for nobugCPU
-Sat Jul 03 11:17:29 2021
-Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
+Sat Jul 03 15:48:48 2021
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
 ---------------------
@@ -35,20 +35,20 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------+
-; Flow Summary                                                       ;
-+-------------------------+------------------------------------------+
-; Flow Status             ; Successful - Sat Jul 03 11:17:29 2021    ;
-; Quartus II Version      ; 9.1 Build 222 10/21/2009 SJ Full Version ;
-; Revision Name           ; nobugCPU                                 ;
-; Top-level Entity Name   ; nobugCPU                                 ;
-; Family                  ; MAX7000S                                 ;
-; Device                  ; EPM7128SLC84-15                          ;
-; Timing Models           ; Final                                    ;
-; Met timing requirements ; Yes                                      ;
-; Total macrocells        ; 32 / 128 ( 25 % )                        ;
-; Total pins              ; 45 / 68 ( 66 % )                         ;
-+-------------------------+------------------------------------------+
++------------------------------------------------------------------------+
+; Flow Summary                                                           ;
++-------------------------+----------------------------------------------+
+; Flow Status             ; Successful - Sat Jul 03 15:48:48 2021        ;
+; Quartus II Version      ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
+; Revision Name           ; nobugCPU                                     ;
+; Top-level Entity Name   ; nobugCPU                                     ;
+; Family                  ; MAX7000S                                     ;
+; Device                  ; EPM7128SLC84-15                              ;
+; Timing Models           ; Final                                        ;
+; Met timing requirements ; Yes                                          ;
+; Total macrocells        ; 36 / 128 ( 28 % )                            ;
+; Total pins              ; 45 / 68 ( 66 % )                             ;
++-------------------------+----------------------------------------------+
 
 
 +-----------------------------------------+
@@ -56,7 +56,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 07/03/2021 11:17:25 ;
+; Start date & time ; 07/03/2021 15:48:45 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; nobugCPU            ;
 +-------------------+---------------------+
@@ -67,7 +67,7 @@ applicable agreement for further details.
 +------------------------------------+------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                                                ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 2200299517014.162528224504920                        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 193912855278073.162529852525444                      ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP             ; 85                                                   ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP             ; 0                                                    ; --            ; --          ; --             ;
 ; MISC_FILE                          ; C:/Users/HP/Desktop/nobugCPU/nobugCPU.dpf            ; --            ; --          ; --             ;
@@ -81,11 +81,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:01     ; 1.0                     ; 208 MB              ; 00:00:01                           ;
-; Fitter                  ; 00:00:01     ; 1.0                     ; 167 MB              ; 00:00:00                           ;
-; Assembler               ; 00:00:01     ; 1.0                     ; 168 MB              ; 00:00:00                           ;
-; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 142 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:03     ; --                      ; --                  ; 00:00:01                           ;
+; Analysis & Synthesis    ; 00:00:01     ; 1.0                     ; 237 MB              ; 00:00:01                           ;
+; Fitter                  ; 00:00:00     ; 1.0                     ; 210 MB              ; 00:00:00                           ;
+; Assembler               ; 00:00:01     ; 1.0                     ; 197 MB              ; 00:00:00                           ;
+; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 170 MB              ; 00:00:00                           ;
+; Total                   ; 00:00:02     ; --                      ; --                  ; 00:00:01                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -94,10 +94,10 @@ applicable agreement for further details.
 +-------------------------+------------------+---------------+------------+----------------+
 ; Module Name             ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
 +-------------------------+------------------+---------------+------------+----------------+
-; Analysis & Synthesis    ; SHD2-15          ; Windows Vista ; 6.1        ; i686           ;
-; Fitter                  ; SHD2-15          ; Windows Vista ; 6.1        ; i686           ;
-; Assembler               ; SHD2-15          ; Windows Vista ; 6.1        ; i686           ;
-; Classic Timing Analyzer ; SHD2-15          ; Windows Vista ; 6.1        ; i686           ;
+; Analysis & Synthesis    ; DESKTOP-GKBKRN5  ; Windows Vista ; 6.2        ; x86_64         ;
+; Fitter                  ; DESKTOP-GKBKRN5  ; Windows Vista ; 6.2        ; x86_64         ;
+; Assembler               ; DESKTOP-GKBKRN5  ; Windows Vista ; 6.2        ; x86_64         ;
+; Classic Timing Analyzer ; DESKTOP-GKBKRN5  ; Windows Vista ; 6.2        ; x86_64         ;
 +-------------------------+------------------+---------------+------------+----------------+
 
 

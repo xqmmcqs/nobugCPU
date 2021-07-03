@@ -15,7 +15,7 @@ end nobugCPU;
 architecture arch of nobugCPU is
     signal WRITE_REG, READ_REG, INS_FETCH, WRITE_MEM, READ_MEM, ST0: std_logic;
     signal ADD, SUB, AND_I, INC, LD, ST, JC, JZ, JMP, STP: std_logic;
-    signal NOP, OUT_I, OR_I, CMP, MOV: std_logic;
+    signal OUT_I, OR_I, CMP, MOV: std_logic;
 begin
     WRITE_REG <= '1' when SW = "100" else '0';
     READ_REG <= '1' when SW = "011" else '0';
@@ -34,7 +34,6 @@ begin
     JMP <= '1' when IR = "1001" and INS_FETCH = '1' and ST0 = '1' else '0';
     STP <= '1' when IR = "1110" and INS_FETCH = '1' and ST0 = '1' else '0';
 
-	NOP <= '1' when IR = "0000" and INS_FETCH = '1' and ST0 = '1' else '0';
     OUT_I <= '1' when IR = "1010" and INS_FETCH = '1' and ST0 = '1' else '0';
     OR_I <= '1' when IR = "1011" and INS_FETCH = '1' and ST0 = '1' else '0';
     CMP <= '1' when IR = "1100" and INS_FETCH = '1' and ST0 = '1' else '0';

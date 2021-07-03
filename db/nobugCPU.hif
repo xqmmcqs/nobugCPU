@@ -1,7 +1,6 @@
-Quartus II
-Version 9.1 Build 222 10/21/2009 SJ Full Version
-33
-1921
+Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+32
+1910
 OFF
 OFF
 OFF
@@ -30,8 +29,8 @@ ON
 }
 # case_insensitive
 # source_file
-nobugcpu.vhd
-43b4c8d5f76c844b176d525dc6c9e57
+nobugCPU.vhd
+8e5fd0ee56772bc516b5c638e4a5aca
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -47,8 +46,8 @@ ON
 |
 }
 # lmf
-|altera|91|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
+..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
 # macro_sequence
 
 # end
