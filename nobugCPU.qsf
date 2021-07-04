@@ -90,3 +90,4 @@ set_location_assignment PIN_12 -to W[1]
 set_global_assignment -name MISC_FILE "C:/Users/HP/Desktop/nobugCPU/nobugCPU.dpf"
 set_global_assignment -name MISC_FILE "C:/Users/Administrator/Desktop/nobugCPU/nobugCPU.dpf"
 set_location_assignment PIN_84 -to Z
+set_global_assignment -name MISC_FILE "C:/Users/Administrator/Desktop/nobug-cpu/nobugCPU.dpf"

@@ -4,11 +4,11 @@ use ieee.std_logic_unsigned.all;
 
 entity nobugCPU is
     port(
-        CLR, T3, C, Z: in std_logic;
-        IR: in std_logic_vector(7 downto 4);
-        SW, W: in std_logic_vector(3 downto 1);
-        DRW, PCINC, LPC, LAR, PCADD, ARINC, SELCTL, MEMW, STOP, LIR, LDZ, LDC, CIN, M, ABUS, SBUS, MBUS, SHORT, LONG: out std_logic;
-        S, SEL: out std_logic_vector(3 downto 0)
+    CLR, T3, C, Z: in std_logic;
+    IR: in std_logic_vector(7 downto 4);
+    SW, W: in std_logic_vector(3 downto 1);
+    DRW, PCINC, LPC, LAR, PCADD, ARINC, SELCTL, MEMW, STOP, LIR, LDZ, LDC, CIN, M, ABUS, SBUS, MBUS, SHORT, LONG: out std_logic;
+    S, SEL: out std_logic_vector(3 downto 0)
     );
 end nobugCPU;
 
@@ -39,16 +39,16 @@ begin
     CMP <= '1' when IR = "1100" and INS_FETCH = '1' and ST0 = '1' else '0';
     MOV <= '1' when IR = "1101" and INS_FETCH = '1' and ST0 = '1' else '0';
 
-	process(CLR, T3, W)
-	begin
-		if (CLR = '0') then
-			ST0 <= '0';
-		elsif (T3'event and T3 = '0') then
+    process(CLR, T3, W)
+    begin
+        if (CLR = '0') then
+            ST0 <= '0';
+        elsif (T3'event and T3 = '0') then
             if (ST0 = '0' and ((WRITE_REG = '1' and W(2) = '1') or (READ_MEM = '1' and W(1) = '1') or (WRITE_MEM = '1' and W(1) = '1') or (INS_FETCH = '1' and W(1) = '1'))) then
-					ST0 <= '1';
-			end if;
+                ST0 <= '1';
+            end if;
         end if;
-	end process;
+    end process;
 
     SBUS <= ((WRITE_REG or (READ_MEM and not ST0) or WRITE_MEM or (INS_FETCH and not ST0)) and W(1)) or (WRITE_REG and W(2));
 

@@ -1,7 +1,7 @@
-Analysis & Synthesis Status : Successful - Sat Jul 03 17:41:07 2021
+Analysis & Synthesis Status : Successful - Sun Jul 04 15:34:08 2021
 Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
 Revision Name : nobugCPU
 Top-level Entity Name : nobugCPU
 Family : MAX7000S
-Total macrocells : 37
+Total macrocells : 36
 Total pins : 41

@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 11.000 ns
+Actual Time    : 20.000 ns
 From           : W[2]
-To             : ST0
+To             : LIR~reg0
 From Clock     : --
 To Clock       : T3
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 27.000 ns
+Actual Time    : 18.000 ns
 From           : ST0
-To             : PCINC
+To             : STOP
 From Clock     : T3
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 26.000 ns
-From           : IR[7]
-To             : PCINC
+Actual Time    : 16.000 ns
+From           : W[1]
+To             : STOP
 From Clock     : --
 To Clock       : --
 Failed Paths   : 0
@@ -37,7 +37,7 @@ Slack          : N/A
 Required Time  : None
 Actual Time    : -3.000 ns
 From           : W[2]
-To             : ST0
+To             : LIR~reg0
 From Clock     : --
 To Clock       : T3
 Failed Paths   : 0
@@ -45,9 +45,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'T3'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 76.92 MHz ( period = 13.000 ns )
+Actual Time    : 22.73 MHz ( period = 44.000 ns )
 From           : ST0
-To             : ST0
+To             : LIR~reg0
 From Clock     : T3
 To Clock       : T3
 Failed Paths   : 0

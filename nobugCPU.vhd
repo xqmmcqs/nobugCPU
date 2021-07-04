@@ -9,7 +9,7 @@ entity nobugCPU is
     SW, W: in std_logic_vector(3 downto 1);
     DRW, PCINC, LPC, LAR, PCADD, ARINC, SELCTL, MEMW, STOP, LIR, LDZ, LDC, CIN, M, ABUS, SBUS, MBUS, SHORT, LONG: out std_logic;
     S, SEL: out std_logic_vector(3 downto 0)
-);
+    );
 end nobugCPU;
 
 architecture arch of nobugCPU is
@@ -51,6 +51,14 @@ begin
         end if;
     end process;
 
+    process(T3, W)
+    begin
+        if (T3'event and T3 = '1') then
+            PCINC <= (INS_FETCH and not ST0 and W(2)) or ((NOP or ADD or SUB or AND_I or INC or (JC and not C) or (JZ and not Z) or OUT_I or OR_I or CMP or MOV) and W(1)) or ((LD or ST or (JC and C) or (JZ and Z) or JMP) and W(2));
+            LIR <= (INS_FETCH and not ST0 and W(2)) or ((NOP or ADD or SUB or AND_I or INC or (JC and not C) or (JZ and not Z) or OUT_I or OR_I or CMP or MOV) and W(1)) or ((LD or ST or (JC and C) or (JZ and Z) or JMP) and W(2));
+        end if;
+    end process;
+
     SBUS <= ((WRITE_REG or (READ_MEM and not ST0) or WRITE_MEM or (INS_FETCH and not ST0)) and W(1)) or (WRITE_REG and W(2));
 
     SEL(3) <= (WRITE_REG and (W(1) or W(2)) and ST0) or (READ_REG and W(2));
@@ -73,9 +81,6 @@ begin
     ARINC <= (WRITE_MEM or READ_MEM) and W(1) and ST0;
 
     MEMW <= (WRITE_MEM and W(1) and ST0) or (ST and W(2));
-
-    PCINC <= (INS_FETCH and not ST0 and W(2)) or ((NOP or ADD or SUB or AND_I or INC or (JC and not C) or (JZ and not Z) or OUT_I or OR_I or CMP or MOV) and W(1)) or ((LD or ST or (JC and C) or (JZ and Z) or JMP) and W(2));
-    LIR <= (INS_FETCH and not ST0 and W(2)) or ((NOP or ADD or SUB or AND_I or INC or (JC and not C) or (JZ and not Z) or OUT_I or OR_I or CMP or MOV) and W(1)) or ((LD or ST or (JC and C) or (JZ and Z) or JMP) and W(2));
 
     CIN <= ADD and W(1);
 
