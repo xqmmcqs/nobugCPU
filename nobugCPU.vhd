@@ -16,7 +16,7 @@ end nobugCPU;
 architecture arch of nobugCPU is
     signal WRITE_REG, READ_REG, INS_FETCH, WRITE_MEM, READ_MEM, ST0: std_logic;
     signal ADD, SUB, AND_I, INC, LD, ST, JC, JZ, JMP, STP: std_logic;
-    signal OUT_I, OR_I, CMP, MOV: std_logic;
+    signal NOP, OUT_I, OR_I, CMP, MOV: std_logic;
     signal IRET, INT, INTEN, INTDI, EN_INT, ST1: std_logic;
 begin
     WRITE_REG <= '1' when SW = "100" else '0';
@@ -36,6 +36,7 @@ begin
     JMP <= '1' when IR = "1001" and INS_FETCH = '1' and ST0 = '1' else '0';
     STP <= '1' when IR = "1110" and INS_FETCH = '1' and ST0 = '1' else '0';
 
+    NOP <= '1' when IR = "0000" and INS_FETCH = '1' and ST0 = '1' else '0';
     OUT_I <= '1' when IR = "1010" and INS_FETCH = '1' and ST0 = '1' else '0';
     OR_I <= '1' when IR = "1011" and INS_FETCH = '1' and ST0 = '1' else '0';
     CMP <= '1' when IR = "1100" and INS_FETCH = '1' and ST0 = '1' else '0';
@@ -50,6 +51,8 @@ begin
         elsif (T3'event and T3 = '0') then
             if (ST0 = '0' and ((WRITE_REG = '1' and W(2) = '1') or (READ_MEM = '1' and W(1) = '1') or (WRITE_MEM = '1' and W(1) = '1') or (INS_FETCH = '1' and W(1) = '1'))) then
                 ST0 <= '1';
+            elsif (ST0 = '1' and (WRITE_REG = '1' and W(2) = '1'))
+                ST0 <= '0';
             end if;
         end if;
     end process;
@@ -59,7 +62,7 @@ begin
         if (CLR = '0') then
             ST1 <= '0';
         elsif (T3'event and T3 = '0') then    
-			if (ST1 = '0' and INT = '1' and (((ADD = '1' or SUB = '1' or AND_I = '1' or INC = '1' or JC = '1' or JZ = '1' or JMP = '1' or OUT_I = '1' or OR_I = '1' or CMP = '1' or MOV = '1' or STP = '1' or IRET = '1') and W(2) = '1') or ((ST = '1' or LD = '1') and W(3) = '1'))) then
+			if (ST1 = '0' and INT = '1' and (((NOP = '1' or ADD = '1' or SUB = '1' or AND_I = '1' or INC = '1' or JC = '1' or JZ = '1' or JMP = '1' or OUT_I = '1' or OR_I = '1' or CMP = '1' or MOV = '1' or STP = '1' or IRET = '1') and W(2) = '1') or ((ST = '1' or LD = '1') and W(3) = '1'))) then
                 ST1 <= '1';
             elsif (ST1 = '1' and INT = '0' and W(2) = '1') then
 				ST1 <= '0';
