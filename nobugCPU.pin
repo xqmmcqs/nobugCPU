@@ -81,7 +81,7 @@ VCCIO                        : 13        : power  :                   : 5.0V    
 TDI                          : 14        : input  : TTL               :         :           : N              
 W[2]                         : 15        : input  : TTL               :         :           : Y              
 W[3]                         : 16        : input  : TTL               :         :           : Y              
-RESERVED                     : 17        :        :                   :         :           :                
+AAAA                         : 17        : output : TTL               :         :           : N              
 PCADD                        : 18        : output : TTL               :         :           : Y              
 GND                          : 19        : gnd    :                   :         :           :                
 DRW                          : 20        : output : TTL               :         :           : Y              
@@ -119,13 +119,13 @@ SEL[3]                       : 51        : output : TTL               :         
 SELCTL                       : 52        : output : TTL               :         :           : Y              
 VCCIO                        : 53        : power  :                   : 5.0V    :           :                
 RESERVED                     : 54        :        :                   :         :           :                
-RESERVED                     : 55        :        :                   :         :           :                
+MF                           : 55        : input  : TTL               :         :           : Y              
 RESERVED                     : 56        :        :                   :         :           :                
 RESERVED                     : 57        :        :                   :         :           :                
 RESERVED                     : 58        :        :                   :         :           :                
 GND                          : 59        : gnd    :                   :         :           :                
 RESERVED                     : 60        :        :                   :         :           :                
-RESERVED                     : 61        :        :                   :         :           :                
+PULSE                        : 61        : input  : TTL               :         :           : Y              
 TCK                          : 62        : input  : TTL               :         :           : N              
 RESERVED                     : 63        :        :                   :         :           :                
 RESERVED                     : 64        :        :                   :         :           :                

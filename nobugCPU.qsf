@@ -50,7 +50,6 @@ set_global_assignment -name MAX7000_DEVICE_IO_STANDARD TTL
 set_location_assignment PIN_40 -to ABUS
 set_location_assignment PIN_24 -to ARINC
 set_location_assignment PIN_2 -to C
-set_location_assignment PIN_33 -to CIN
 set_location_assignment PIN_1 -to CLR
 set_location_assignment PIN_20 -to DRW
 set_location_assignment PIN_11 -to IR[7]
@@ -91,3 +90,7 @@ set_global_assignment -name MISC_FILE "C:/Users/HP/Desktop/nobugCPU/nobugCPU.dpf
 set_global_assignment -name MISC_FILE "C:/Users/Administrator/Desktop/nobugCPU/nobugCPU.dpf"
 set_location_assignment PIN_84 -to Z
 set_global_assignment -name MISC_FILE "C:/Users/Administrator/Desktop/nobug-cpu/nobugCPU.dpf"
+set_location_assignment PIN_55 -to MF
+set_location_assignment PIN_61 -to PULSE
+set_location_assignment PIN_60 -to QD
+set_location_assignment PIN_33 -to CIN

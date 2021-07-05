@@ -1,5 +1,5 @@
 Assembler report for nobugCPU
-Sun Jul 04 15:34:10 2021
+Mon Jul 05 17:55:16 2021
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Jul 04 15:34:10 2021 ;
+; Assembler Status      ; Successful - Mon Jul 05 17:55:16 2021 ;
 ; Revision Name         ; nobugCPU                              ;
 ; Top-level Entity Name ; nobugCPU                              ;
 ; Family                ; MAX7000S                              ;
@@ -89,7 +89,7 @@ applicable agreement for further details.
 +----------------+----------------------------------------------------------------+
 ; Device         ; EPM7128SLC84-15                                                ;
 ; JTAG usercode  ; 0x00000000                                                     ;
-; Checksum       ; 0x001C6DE0                                                     ;
+; Checksum       ; 0x001C3259                                                     ;
 +----------------+----------------------------------------------------------------+
 
 
@@ -99,12 +99,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Sun Jul 04 15:34:10 2021
+    Info: Processing started: Mon Jul 05 17:55:16 2021
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off nobugCPU -c nobugCPU
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 169 megabytes
-    Info: Processing ended: Sun Jul 04 15:34:10 2021
+    Info: Processing ended: Mon Jul 05 17:55:16 2021
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

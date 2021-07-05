@@ -1,5 +1,5 @@
 Analysis & Synthesis report for nobugCPU
-Sun Jul 04 15:34:08 2021
+Mon Jul 05 17:55:13 2021
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -13,7 +13,8 @@ Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. Analysis & Synthesis Messages
 
 
 
@@ -39,13 +40,13 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun Jul 04 15:34:08 2021    ;
+; Analysis & Synthesis Status ; Successful - Mon Jul 05 17:55:13 2021    ;
 ; Quartus II Version          ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name               ; nobugCPU                                 ;
 ; Top-level Entity Name       ; nobugCPU                                 ;
 ; Family                      ; MAX7000S                                 ;
-; Total macrocells            ; 36                                       ;
-; Total pins                  ; 41                                       ;
+; Total macrocells            ; 40                                       ;
+; Total pins                  ; 44                                       ;
 +-----------------------------+------------------------------------------+
 
 
@@ -139,15 +140,14 @@ applicable agreement for further details.
 +----------------------+----------------------+
 ; Resource             ; Usage                ;
 +----------------------+----------------------+
-; Logic cells          ; 36                   ;
+; Logic cells          ; 40                   ;
 ; Total registers      ; 3                    ;
-; I/O pins             ; 41                   ;
-; Shareable expanders  ; 4                    ;
-; Parallel expanders   ; 6                    ;
-; Maximum fan-out node ; SW[2]                ;
-; Maximum fan-out      ; 35                   ;
-; Total fan-out        ; 346                  ;
-; Average fan-out      ; 4.27                 ;
+; I/O pins             ; 44                   ;
+; Parallel expanders   ; 9                    ;
+; Maximum fan-out node ; SW[1]                ;
+; Maximum fan-out      ; 39                   ;
+; Total fan-out        ; 413                  ;
+; Average fan-out      ; 4.92                 ;
 +----------------------+----------------------+
 
 
@@ -156,8 +156,19 @@ applicable agreement for further details.
 +----------------------------+------------+------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+------------+------+---------------------+--------------+
-; |nobugCPU                  ; 36         ; 41   ; |nobugCPU           ; work         ;
+; |nobugCPU                  ; 40         ; 44   ; |nobugCPU           ; work         ;
 +----------------------------+------------+------+---------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; INT                                                ; INT                 ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +-------------------------------+
@@ -166,29 +177,27 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Sun Jul 04 15:34:07 2021
+    Info: Processing started: Mon Jul 05 17:55:13 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off nobugCPU -c nobugCPU
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 2 design units, including 1 entities, in source file nobugcpu.vhd
     Info: Found design unit 1: nobugCPU-arch
     Info: Found entity 1: nobugCPU
 Info: Elaborating entity "nobugCPU" for the top level hierarchy
-Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LONG" is stuck at GND
+Warning (10631): VHDL Process Statement warning at nobugCPU.vhd(128): inferring latch(es) for signal or variable "INT", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "INT" at nobugCPU.vhd(128)
+Info: Registers with preset signals will power-up high
 Info: Promoted pin-driven signal(s) to global signal
     Info: Promoted clear signal driven by pin "CLR" to global clear signal
     Info: Promoted clock signal driven by pin "T3" to global clock signal
-Warning: Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "W[3]"
-Info: Implemented 81 device resources after synthesis - the final resource count might be different
-    Info: Implemented 14 input pins
-    Info: Implemented 27 output pins
-    Info: Implemented 36 macrocells
-    Info: Implemented 4 shareable expanders
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 208 megabytes
-    Info: Processing ended: Sun Jul 04 15:34:08 2021
-    Info: Elapsed time: 00:00:01
+Info: Implemented 84 device resources after synthesis - the final resource count might be different
+    Info: Implemented 16 input pins
+    Info: Implemented 28 output pins
+    Info: Implemented 40 macrocells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 215 megabytes
+    Info: Processing ended: Mon Jul 05 17:55:13 2021
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

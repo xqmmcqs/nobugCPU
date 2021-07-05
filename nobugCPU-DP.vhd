@@ -54,7 +54,7 @@ begin
         end if;
     end process;
     
-    process(CLR, T3, W, INT)
+    process(CLR, T3, W, INT, QD)
 	begin
         if (CLR = '0') then
             ST1 <= '0';
@@ -116,11 +116,11 @@ begin
 
     PCADD <= ((C and JC) or (Z and JZ)) and W(2);
 
-    process (CLR, MF, INTEN, INTDI, PULSE, EN_INT)
+    process (CLR, MF, QD, INTEN, INTDI, PULSE, EN_INT)
     begin
         if CLR = '0' then
             EN_INT <= '1';
-        elsif MF'event and MF = '1' then
+        elsif QD'event and QD = '1' then
             EN_INT <= INTEN OR (EN_INT and not INTDI);
         end if;
     end process;
