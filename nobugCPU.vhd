@@ -79,7 +79,7 @@ begin
 
     SELCTL <= ((WRITE_REG or READ_REG) and (W(1) or W(2))) or ((READ_MEM or WRITE_MEM) and W(1)) or (INS_FETCH and not ST0 and W(1)) or (INS_FETCH and W(1) and ST0 and EN_INT) or (IRET and W(3));
 
-    DRW <= (WRITE_REG and (W(1) or W(2))) or ((ADD or SUB or AND_I or INC or OR_I or MOV or JMP) and W(2)) or (LD and W(3)) or (INS_FETCH and not ST0 and W(1)) or (INS_FETCH and W(1) and ST0 and EN_INT);
+    DRW <= (WRITE_REG and (W(1) or W(2))) or ((ADD or SUB or AND_I or INC or OR_I or MOV or (JMP and EN_INT)) and W(2)) or (LD and W(3)) or (INS_FETCH and not ST0 and W(1)) or (INS_FETCH and W(1) and ST0 and EN_INT);
 
     STOP <= ((WRITE_REG or READ_REG) and (W(1) or W(2))) or ((READ_MEM or WRITE_MEM) and W(1)) or (STP and W(2)) or (ST1 and W(1)) or (INS_FETCH and not ST0 and W(1)) or (IRET and W(2));
 
