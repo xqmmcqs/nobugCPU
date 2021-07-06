@@ -1,5 +1,5 @@
 Flow report for nobugCPU
-Mon Jul 05 17:55:17 2021
+Tue Jul 06 16:09:55 2021
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------+
 ; Flow Summary                                                       ;
 +-------------------------+------------------------------------------+
-; Flow Status             ; Successful - Mon Jul 05 17:55:17 2021    ;
+; Flow Status             ; Successful - Tue Jul 06 16:09:55 2021    ;
 ; Quartus II Version      ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name           ; nobugCPU                                 ;
 ; Top-level Entity Name   ; nobugCPU                                 ;
@@ -46,7 +46,7 @@ applicable agreement for further details.
 ; Device                  ; EPM7128SLC84-15                          ;
 ; Timing Models           ; Final                                    ;
 ; Met timing requirements ; Yes                                      ;
-; Total macrocells        ; 41 / 128 ( 32 % )                        ;
+; Total macrocells        ; 42 / 128 ( 33 % )                        ;
 ; Total pins              ; 48 / 68 ( 71 % )                         ;
 +-------------------------+------------------------------------------+
 
@@ -56,7 +56,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 07/05/2021 17:55:13 ;
+; Start date & time ; 07/06/2021 16:09:50 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; nobugCPU            ;
 +-------------------+---------------------+
@@ -67,7 +67,7 @@ applicable agreement for further details.
 +------------------------------------+-------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                                                 ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+-------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 2200299517014.162547891304832                         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 2200299517014.162555899002612                         ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP             ; 85                                                    ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP             ; 0                                                     ; --            ; --          ; --             ;
 ; MISC_FILE                          ; C:/Users/HP/Desktop/nobugCPU/nobugCPU.dpf             ; --            ; --          ; --             ;
@@ -82,11 +82,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:01     ; 1.0                     ; 215 MB              ; 00:00:01                           ;
+; Analysis & Synthesis    ; 00:00:02     ; 1.0                     ; 215 MB              ; 00:00:01                           ;
 ; Fitter                  ; 00:00:01     ; 1.0                     ; 167 MB              ; 00:00:01                           ;
-; Assembler               ; 00:00:01     ; 1.0                     ; 168 MB              ; 00:00:00                           ;
-; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 142 MB              ; 00:00:01                           ;
-; Total                   ; 00:00:03     ; --                      ; --                  ; 00:00:03                           ;
+; Assembler               ; 00:00:01     ; 1.0                     ; 168 MB              ; 00:00:01                           ;
+; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 142 MB              ; 00:00:01                           ;
+; Total                   ; 00:00:05     ; --                      ; --                  ; 00:00:04                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

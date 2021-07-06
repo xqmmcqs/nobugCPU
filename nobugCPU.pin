@@ -81,7 +81,7 @@ VCCIO                        : 13        : power  :                   : 5.0V    
 TDI                          : 14        : input  : TTL               :         :           : N              
 W[2]                         : 15        : input  : TTL               :         :           : Y              
 W[3]                         : 16        : input  : TTL               :         :           : Y              
-AAAA                         : 17        : output : TTL               :         :           : N              
+AAAA                         : 17        : output : TTL               :         :           : Y              
 PCADD                        : 18        : output : TTL               :         :           : Y              
 GND                          : 19        : gnd    :                   :         :           :                
 DRW                          : 20        : output : TTL               :         :           : Y              

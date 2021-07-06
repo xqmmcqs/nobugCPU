@@ -94,3 +94,4 @@ set_location_assignment PIN_55 -to MF
 set_location_assignment PIN_61 -to PULSE
 set_location_assignment PIN_60 -to QD
 set_location_assignment PIN_33 -to CIN
+set_location_assignment PIN_17 -to AAAA

@@ -51,7 +51,7 @@ begin
         elsif (T3'event and T3 = '0') then
             if (ST0 = '0' and ((WRITE_REG = '1' and W(2) = '1') or (READ_MEM = '1' and W(1) = '1') or (WRITE_MEM = '1' and W(1) = '1') or (INS_FETCH = '1' and W(1) = '1'))) then
                 ST0 <= '1';
-            elsif (ST0 = '1' and (WRITE_REG = '1' and W(2) = '1'))
+            elsif (ST0 = '1' and (WRITE_REG = '1' and W(2) = '1')) then
                 ST0 <= '0';
             end if;
         end if;
@@ -81,7 +81,7 @@ begin
 
     DRW <= (WRITE_REG and (W(1) or W(2))) or ((ADD or SUB or AND_I or INC or OR_I or MOV or JMP) and W(2)) or (LD and W(3)) or (INS_FETCH and not ST0 and W(1)) or (INS_FETCH and W(1) and ST0 and EN_INT);
 
-    STOP <= ((WRITE_REG or READ_REG) and (W(1) or W(2))) or ((READ_MEM or WRITE_MEM) and W(1)) or (STP and W(2)) or (ST1 and W(1));
+    STOP <= ((WRITE_REG or READ_REG) and (W(1) or W(2))) or ((READ_MEM or WRITE_MEM) and W(1)) or (STP and W(2)) or (ST1 and W(1)) or (INS_FETCH and not ST0 and W(1)) or (IRET and W(2));
 
     LAR <= ((READ_MEM or WRITE_MEM) and W(1) and not ST0) or ((ST or LD) and W(2));
 
@@ -145,6 +145,6 @@ begin
 
     INTEN <= IRET and W(1);
     
-    AAAA <= INT;
+    AAAA <= IRET;
 
 end architecture arch;

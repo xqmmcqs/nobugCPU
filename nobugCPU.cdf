@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EPM7128SL84) Path("C:/Users/Administrator/Desktop/nobugCPU/") File("nobugCPU.pof") MfrSpec(OpMask(1));
+		Device PartName(EPM7128SL84) Path("C:/Users/Administrator/Desktop/nobug-cpu/") File("nobugCPU.pof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
