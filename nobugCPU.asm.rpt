@@ -1,5 +1,5 @@
 Assembler report for nobugCPU
-Tue Jul 06 16:09:54 2021
+Tue Jul 06 18:52:36 2021
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -10,7 +10,7 @@ Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Administrator/Desktop/nobug-cpu/nobugCPU.pof
+  5. Assembler Device Options: C:/Users/Administrator/Desktop/nobugCPU/nobugCPU.pof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Jul 06 16:09:54 2021 ;
+; Assembler Status      ; Successful - Tue Jul 06 18:52:36 2021 ;
 ; Revision Name         ; nobugCPU                              ;
 ; Top-level Entity Name ; nobugCPU                              ;
 ; Family                ; MAX7000S                              ;
@@ -73,24 +73,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+-------------------------------------------------------+
-; Assembler Generated Files                             ;
-+-------------------------------------------------------+
-; File Name                                             ;
-+-------------------------------------------------------+
-; C:/Users/Administrator/Desktop/nobug-cpu/nobugCPU.pof ;
-+-------------------------------------------------------+
++------------------------------------------------------+
+; Assembler Generated Files                            ;
++------------------------------------------------------+
+; File Name                                            ;
++------------------------------------------------------+
+; C:/Users/Administrator/Desktop/nobugCPU/nobugCPU.pof ;
++------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Administrator/Desktop/nobug-cpu/nobugCPU.pof ;
-+----------------+----------------------------------------------------------------+
-; Option         ; Setting                                                        ;
-+----------------+----------------------------------------------------------------+
-; Device         ; EPM7128SLC84-15                                                ;
-; JTAG usercode  ; 0x00000000                                                     ;
-; Checksum       ; 0x001C270C                                                     ;
-+----------------+----------------------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Administrator/Desktop/nobugCPU/nobugCPU.pof ;
++----------------+---------------------------------------------------------------+
+; Option         ; Setting                                                       ;
++----------------+---------------------------------------------------------------+
+; Device         ; EPM7128SLC84-15                                               ;
+; JTAG usercode  ; 0x00000000                                                    ;
+; Checksum       ; 0x001C4041                                                    ;
++----------------+---------------------------------------------------------------+
 
 
 +--------------------+
@@ -99,13 +99,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Tue Jul 06 16:09:53 2021
+    Info: Processing started: Tue Jul 06 18:52:36 2021
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off nobugCPU -c nobugCPU
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 169 megabytes
-    Info: Processing ended: Tue Jul 06 16:09:54 2021
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Tue Jul 06 18:52:36 2021
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
 

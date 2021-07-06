@@ -1,5 +1,5 @@
 Analysis & Synthesis report for nobugCPU
-Tue Jul 06 16:09:51 2021
+Tue Jul 06 18:52:34 2021
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue Jul 06 16:09:51 2021    ;
+; Analysis & Synthesis Status ; Successful - Tue Jul 06 18:52:34 2021    ;
 ; Quartus II Version          ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name               ; nobugCPU                                 ;
 ; Top-level Entity Name       ; nobugCPU                                 ;
@@ -126,13 +126,13 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                       ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                          ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------+
-; nobugCPU.vhd                     ; yes             ; User VHDL File  ; C:/Users/Administrator/Desktop/nobug-cpu/nobugCPU.vhd ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                      ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------+
+; nobugCPU.vhd                     ; yes             ; User VHDL File  ; C:/Users/Administrator/Desktop/nobugCPU/nobugCPU.vhd ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------+
 
 
 +---------------------------------------------+
@@ -144,11 +144,11 @@ applicable agreement for further details.
 ; Total registers      ; 3                    ;
 ; I/O pins             ; 44                   ;
 ; Shareable expanders  ; 1                    ;
-; Parallel expanders   ; 9                    ;
+; Parallel expanders   ; 10                   ;
 ; Maximum fan-out node ; SW[1]                ;
 ; Maximum fan-out      ; 40                   ;
-; Total fan-out        ; 424                  ;
-; Average fan-out      ; 4.93                 ;
+; Total fan-out        ; 422                  ;
+; Average fan-out      ; 4.91                 ;
 +----------------------+----------------------+
 
 
@@ -178,15 +178,15 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Tue Jul 06 16:09:50 2021
+    Info: Processing started: Tue Jul 06 18:52:33 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off nobugCPU -c nobugCPU
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 2 design units, including 1 entities, in source file nobugcpu.vhd
     Info: Found design unit 1: nobugCPU-arch
     Info: Found entity 1: nobugCPU
 Info: Elaborating entity "nobugCPU" for the top level hierarchy
-Warning (10631): VHDL Process Statement warning at nobugCPU.vhd(131): inferring latch(es) for signal or variable "INT", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "INT" at nobugCPU.vhd(131)
+Warning (10631): VHDL Process Statement warning at nobugCPU.vhd(134): inferring latch(es) for signal or variable "INT", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "INT" at nobugCPU.vhd(134)
 Info: Registers with preset signals will power-up high
 Info: Promoted pin-driven signal(s) to global signal
     Info: Promoted clear signal driven by pin "CLR" to global clear signal
@@ -197,8 +197,8 @@ Info: Implemented 86 device resources after synthesis - the final resource count
     Info: Implemented 41 macrocells
     Info: Implemented 1 shareable expanders
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 215 megabytes
-    Info: Processing ended: Tue Jul 06 16:09:51 2021
+    Info: Peak virtual memory: 216 megabytes
+    Info: Processing ended: Tue Jul 06 18:52:34 2021
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

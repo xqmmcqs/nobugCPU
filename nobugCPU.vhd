@@ -4,7 +4,7 @@ use ieee.std_logic_unsigned.all;
 
 entity nobugCPU is
     port(
-    CLR, T3, C, Z, MF, PULSE: in std_logic;
+    CLR, T3, C, Z, PULSE, MF: in std_logic;
     IR: in std_logic_vector(7 downto 4);
     SW, W: in std_logic_vector(3 downto 1);
     DRW, PCINC, LPC, LAR, PCADD, ARINC, SELCTL, MEMW, STOP, LIR, LDZ, LDC, CIN, M, ABUS, SBUS, MBUS, SHORT, LONG: out std_logic;
@@ -62,7 +62,10 @@ begin
         if (CLR = '0') then
             ST1 <= '0';
         elsif (T3'event and T3 = '0') then    
-			if (ST1 = '0' and INT = '1' and (((NOP = '1' or ADD = '1' or SUB = '1' or AND_I = '1' or INC = '1' or JC = '1' or JZ = '1' or JMP = '1' or OUT_I = '1' or OR_I = '1' or CMP = '1' or MOV = '1' or STP = '1' or IRET = '1') and W(2) = '1') or ((ST = '1' or LD = '1') and W(3) = '1'))) then
+			if (ST1 = '0' and INT = '1' and 
+                (((NOP = '1' or ADD = '1' or SUB = '1' or AND_I = '1' or INC = '1' or JC = '1' or JZ = '1' or JMP = '1' or OUT_I = '1' or 
+				OR_I = '1' or CMP = '1' or MOV = '1' or STP = '1' or IRET = '1')and W(2) = '1') 
+                or ((ST = '1' or LD = '1') and W(3) = '1'))) then
                 ST1 <= '1';
             elsif (ST1 = '1' and INT = '0' and W(2) = '1') then
 				ST1 <= '0';
@@ -119,12 +122,12 @@ begin
 
     PCADD <= ((C and JC) or (Z and JZ)) and W(2);
 
-    process (CLR, MF, INTEN, INTDI, PULSE, EN_INT)
+    process (CLR, INTEN, INTDI, EN_INT, MF)
     begin
         if CLR = '0' then
             EN_INT <= '1';
-        elsif MF'event and MF = '1' then
-            EN_INT <= INTEN OR (EN_INT and not INTDI);
+		elsif MF'event and MF = '1' then
+			EN_INT <= INTEN or (EN_INT and not INTDI);
         end if;
     end process;
     
@@ -145,6 +148,6 @@ begin
 
     INTEN <= IRET and W(1);
     
-    AAAA <= IRET;
+    AAAA <= EN_INT;
 
 end architecture arch;
